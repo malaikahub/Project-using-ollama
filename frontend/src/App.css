@@ -1,0 +1,364 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- App Container ---------- */
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ---------- Title ---------- */
+.app-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #e6dcdc;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(180deg, #1964a5, #2f3a9e);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  width: 100%;
+}
+
+.navbar-left img {
+  height: 45px;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-center img {
+  height: 45px;
+}
+
+.navbar-center button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.navbar-center button:hover {
+  background: #ff9800;
+  color: #000;
+}
+
+.hero-image {
+  width: 100%;
+  height: 30vh; /* 30% of viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 30%;
+  height: 30%;
+  object-fit: contain; /* prevents stretching */
+}
+
+
+
+/* ---------- Image Captioner Section ---------- */
+.ImageCaptioner {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(241, 238, 238, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.ImageCaptioner input[type="file"] {
+  margin: 15px 0;
+}
+
+.ImageCaptioner button {
+  background: #ff9800;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ImageCaptioner button:hover {
+  background: #e68900;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: linear-gradient(180deg, #0c2b47, #0f1444);
+  color: #fff;
+  padding: 50px 20px 20px;
+  width: 100%;
+  margin-top: auto; /* pushes footer to bottom */
+  margin-bottom: 0%;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ff9800;
+}
+
+/* ---------- Subscribe Box ---------- */
+.subscribe-box h3 {
+  margin-bottom: 15px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  flex: 1;
+  outline: none;
+}
+
+.subscribe-form input:focus {
+  box-shadow: 0px 0px 5px #ff9800;
+}
+
+.subscribe-form button {
+  background: darkblue;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: rgb(8, 8, 77);
+}
+
+.checkbox-wrapper {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.checkbox-wrapper input {
+  margin-right: 5px;
+}
+
+/* ---------- Footer Social Icons ---------- */
+.footer-social {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-social i {
+  margin: 0 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-social i:hover {
+  color: #ff9800;
+}
+
+/* ---------- Divider ---------- */
+.footer hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 20px 0;
+}
+
+/* ---------- Footer Bottom ---------- */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.footer-bottom ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-bottom ul li a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+  color: #ff9800;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .navbar-center {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-top .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-bottom {
+  width: 100%;
+}
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+}
+
+.preview-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.preview-image {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dolphin-follower {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.dolphin-toggle-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+
+.dolphin-toggle-btn {
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.dolphin-toggle-btn:hover {
+  background-color: rgb(8, 8, 77);
+}
+

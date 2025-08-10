@@ -2,7 +2,7 @@ AI-Powered Image Caption Generator – Project Report
 
 1. Introduction
 This project, developed for Apex IT Solutions as part of professional training, is an AI-powered Image Caption Generator. It allows users to upload an image, which is then analyzed by a locally running AI model to generate a meaningful caption. Unlike cloud-based APIs, the AI runs entirely on the local machine via Ollama, ensuring data privacy and fast processing.
-<img width="1588" height="774" alt="image" src="https://github.com/user-attachments/assets/ddfb66b5-f8bb-4024-9f78-c782eafea172" />
+<img width="1600" height="774" alt="image" src="https://github.com/user-attachments/assets/ee698ad4-bd80-4638-97ee-bb07ae4fd3bb" />
 
 2. Purpose of the Website
 The primary purpose of the website is to:
@@ -20,26 +20,26 @@ Purpose: Helps users quickly navigate between sections.
 3.2 Home Section
 Background Color: White background with black text for readability.
 Purpose: Introduces the project and briefly explains its purpose before users interact with it.
-<img width="1600" height="576" alt="image" src="https://github.com/user-attachments/assets/35b1bb83-8613-4008-9326-46bda63210da" />
+<img width="1585" height="693" alt="image" src="https://github.com/user-attachments/assets/43828883-a0a3-402a-9069-a69ca331b8f7" />
 3.3 Image Upload Section
 File Input Button: Lets the user browse and select an image from their device.
 Upload Button: Sends the selected image to the backend for processing.
 Purpose: Main functional area of the site where users upload images for caption generation.
 
-<img width="578" height="306" alt="image" src="https://github.com/user-attachments/assets/f75007fb-8160-4c47-9846-c02c0d4eda07" />
+<img width="421" height="67" alt="image" src="https://github.com/user-attachments/assets/637991c3-2653-4735-a4a9-52da9ed23ae0" />
 
 3.4 Caption Display Area
 Caption Output Box: Shows the AI-generated caption immediately after processing.
 Purpose: Gives instant results to the user without needing to reload the page.
 
-<img width="582" height="30" alt="image" src="https://github.com/user-attachments/assets/d3da2990-82d9-4e53-ad6d-21f0b5c65065" />
+<img width="515" height="60" alt="image" src="https://github.com/user-attachments/assets/cafbd269-cf9e-4643-bc94-a5ed5634f7b8" />
 
 3.5 Buttons
 Upload Button: Triggers the backend API call to send the image.
 Clear Button (if added): Resets the upload and caption fields.
 Purpose: Makes interaction smooth and user-controlled.
 
-<img width="377" height="32" alt="image" src="https://github.com/user-attachments/assets/f1d3d8c6-bd94-47ca-b701-4fc1b7a1c41d" />
+<img width="533" height="330" alt="image" src="https://github.com/user-attachments/assets/277bd819-b6f4-4323-82f5-878910db386c" />
 
 3.6 Images
 Uploaded Image Preview: Displays the image a user uploads before caption generation.

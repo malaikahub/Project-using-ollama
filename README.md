@@ -25,28 +25,37 @@ Purpose: Introduces the project and briefly explains its purpose before users in
 File Input Button: Lets the user browse and select an image from their device.
 Upload Button: Sends the selected image to the backend for processing.
 Purpose: Main functional area of the site where users upload images for caption generation.
+
 <img width="578" height="306" alt="image" src="https://github.com/user-attachments/assets/f75007fb-8160-4c47-9846-c02c0d4eda07" />
+
 3.4 Caption Display Area
 Caption Output Box: Shows the AI-generated caption immediately after processing.
 Purpose: Gives instant results to the user without needing to reload the page.
+
 <img width="582" height="30" alt="image" src="https://github.com/user-attachments/assets/d3da2990-82d9-4e53-ad6d-21f0b5c65065" />
+
 3.5 Buttons
 Upload Button: Triggers the backend API call to send the image.
 Clear Button (if added): Resets the upload and caption fields.
 Purpose: Makes interaction smooth and user-controlled.
+
 <img width="377" height="32" alt="image" src="https://github.com/user-attachments/assets/f1d3d8c6-bd94-47ca-b701-4fc1b7a1c41d" />
+
 3.6 Images
 Uploaded Image Preview: Displays the image a user uploads before caption generation.
 Purpose: Confirms to the user that the correct image was selected.
+
 <img width="171" height="128" alt="image" src="https://github.com/user-attachments/assets/77c3dc9c-f034-43ee-aa12-d1a6119637ea" />
+
 3.7 Footer Section
 Blue Background for contrast.
 Social Media Icons: Facebook, Twitter, Instagram, LinkedIn, YouTube.
 Contact Info: Email, phone number, and address.
 Purpose: Provides additional navigation, branding, and contact details.
+
 <img width="1585" height="377" alt="image" src="https://github.com/user-attachments/assets/6e94c8d5-486f-4109-b0ea-bc960cf90729" />
 
-4. Installation & Setup from Scratch
+5. Installation & Setup from Scratch
 Here’s exactly what you need to install to make this project work:
 A. Install Frontend (React)
 npx create-react-app ai-captioner
@@ -67,17 +76,23 @@ D. Download AI Model
 ollama pull llama3.2-vision
 •	This downloads the llama3.2-vision model for local AI image captioning.
 E. Run the Project
+
 1️⃣ Run Backend
 node server.js
+
  <img width="672" height="260" alt="image" src="https://github.com/user-attachments/assets/1ac6c459-0d1b-4d26-9796-dfed2a01d708" />
+ 
 2️⃣ Run Frontend
 npm start
+
  <img width="702" height="441" alt="image" src="https://github.com/user-attachments/assets/d7957f53-742c-4d6b-a355-9bbca1a7ac2b" />
+ 
 3️⃣ Run Ollama
 ollama serve
+
  <img width="768" height="406" alt="image" src="https://github.com/user-attachments/assets/d67a4f78-e9de-462d-b17e-dd25a763833e" />
  
-5. User Workflow
+7. User Workflow
 User opens the website.
 User navigates to the Upload Section.
 User selects and uploads an image.
@@ -85,7 +100,7 @@ Backend sends the image to Ollama for analysis.
 AI model generates a caption and sends it back.
 Caption is displayed alongside the uploaded image.
 
-6. Conclusion
+8. Conclusion
 The AI Image Caption Generator successfully meets the project requirements. By switching from API-based AI to local Ollama processing, the system became more reliable, secure, and faster. This project also enhanced my technical expertise in:
 •	Full-stack development (React + Node.js)
 •	AI integration with local processing

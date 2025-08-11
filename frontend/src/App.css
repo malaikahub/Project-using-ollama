@@ -18,11 +18,62 @@ html, body {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
-  color: #333333;
+  color: #fffafa;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
 }
+
+/* ===== Home section: white bg, black text ===== */
+.home-section {
+  background-color: #ffffff !important; /* white background */
+  color: #000000 !important;            /* default text black */
+}
+
+/* make headings, paragraphs, links, and buttons inside home black */
+.home-section h1,
+.home-section h2,
+.home-section h3,
+.home-section h4,
+.home-section p,
+.home-section a,
+.home-section button,
+.home-section label,
+.home-section input,
+.home-section .app-title {
+  color: #000000 !important;
+}
+
+/* if a specific component set a background (like .hero-image), reset it */
+.home-section .hero-image {
+  background-color: transparent !important;
+}
+
+/* ensure preview images don't inherit dark overlays */
+.home-section .preview-image,
+.home-section img {
+  filter: none !important;
+}
+
+/* make any white-text buttons more visible if needed */
+.home-section .navbar-center button,
+.home-section .dolphin-toggle-btn,
+.home-section .subscribe-form button {
+  color: #000 !important;
+  background: #fff !important;
+  border: 1px solid #ddd;
+}
+
+/* If .app-title had a pale color before, force it black */
+.home-section .app-title { color: #111 !important; }
+
+/* responsive keep */
+@media (max-width: 768px) {
+  .home-section { padding-bottom: 30px; }
+}
+
+
+
 
 /* ---------- App Container ---------- */
 .app-container {
@@ -37,7 +88,7 @@ body {
 .app-title {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #e6dcdc;
+  color: #000000;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -111,7 +162,7 @@ body {
 
 /* ---------- Image Captioner Section ---------- */
 .ImageCaptioner {
-  background: #fff;
+  background: #ffffff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(241, 238, 238, 0.1);
@@ -140,47 +191,174 @@ body {
 }
 
 /* ---------- Footer ---------- */
-.footer {
-  background: linear-gradient(180deg, #0c2b47, #0f1444);
-  color: #fff;
+/* New Footer Layout */
+.new-footer {
+  background-color: #004080; /* Deep Blue */
+  color: white;
   padding: 50px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
-  margin-top: auto; /* pushes footer to bottom */
-  margin-bottom: 0%;
 }
 
-.footer-top {
+.footer-columns {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: space-between;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 30px;
+  gap: 30px;
 }
 
-.footer-column h3 {
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-col h4 {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
 }
 
-.footer-column ul {
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-col ul {
   list-style: none;
+  padding: 0;
 }
 
-.footer-column ul li {
+.footer-col ul li {
   margin-bottom: 8px;
 }
 
-.footer-column ul li a {
-  color: #bbb;
+.footer-col ul li a {
+  color: #ffcc00;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-.footer-column ul li a:hover {
-  color: #ff9800;
+.footer-col ul li a:hover {
+  color: white;
 }
+
+/* Subscribe box */
+.subscribe-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.subscribe-form input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.subscribe-form button {
+  background-color: #ffcc00;
+  color: #004080;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: white;
+  color: #004080;
+}
+
+.footer-checkbox {
+  font-size: 0.8rem;
+  color: #ddd;
+}
+
+.footer-checkbox input {
+  margin-right: 5px;
+}
+
+/* Social icons */
+/* Footer social container */
+.footer-social {
+  display: flex;
+  gap: 15px; /* space between icons */
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Each icon circle */
+.footer-social i {
+  background-color: white; /* circle background */
+  color: #0077cc; /* icon color (blue) */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+.footer-social i:hover {
+  background-color: #005fa3; /* darker blue on hover */
+  color: white; /* icon turns white */
+  transform: scale(1.1);
+}
+
+
+/* Bottom text */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #ddd;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+}
+
+.footer-bottom a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* Bottom text */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 
 /* ---------- Subscribe Box ---------- */
 .subscribe-box h3 {
@@ -361,4 +539,177 @@ body {
 .dolphin-toggle-btn:hover {
   background-color: rgb(8, 8, 77);
 }
+
+/* Style for "Choose File" */
+input[type="file"]::-webkit-file-upload-button {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: darkblue;
+}
+
+/* Style for "Generate Caption" */
+button {
+  background-color: rgb(104, 104, 230);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: royalblue;
+}
+
+.home-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 8%;
+  min-height: 100vh;
+  background: radial-gradient(circle at 30% 20%, #1e3c72, #2a5298, #0f2027);
+  overflow: hidden;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.text-block {
+  flex: 1;
+  max-width: 500px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+.app-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.app-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+.captioner-wrapper {
+  margin-top: 2rem;
+}
+
+.cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Decorative Orbs */
+.decorative-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: pulse 10s ease-in-out infinite;
+}
+.orb1 {
+  width: 250px;
+  height: 250px;
+  background: #ff7eb3;
+  top: -50px;
+  left: -50px;
+}
+.orb2 {
+  width: 200px;
+  height: 200px;
+  background: #65d6ce;
+  bottom: 50px;
+  right: 50px;
+}
+.orb3 {
+  width: 150px;
+  height: 150px;
+  background: #ffda77;
+  top: 200px;
+  right: 200px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
 
